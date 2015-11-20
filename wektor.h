@@ -8,7 +8,7 @@ typedef struct{
 	
 } wektor;
 
-void dodaj_linie(wektor w, int linia);
+void dodaj_linie(wektor *w, int linia);
 
 
 
