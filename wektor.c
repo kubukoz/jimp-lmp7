@@ -18,6 +18,6 @@ void dodaj_linie(wektor *w, int linia) {
         w->linie = realloc(w->linie, w->max);
     }
 
-    w->linie[w->size] = linia;
+    w->linie[w->size + 1] = linia;
     w->size++;
 }
