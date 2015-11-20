@@ -2,15 +2,13 @@
 #define _WEKTOR_H_
 
 typedef struct{
-	char **slowa;
-	int **linie;	
-
-	int n;
+	int *linie;	
+	int max;
 	int size;
 	
-} container_t;
+} wektor;
 
-
+void dodaj_linie(wektor w, int linia);
 
 
 
