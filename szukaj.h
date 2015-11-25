@@ -1,9 +1,11 @@
-#ifndef ____szukaj__
-#define ____szukaj__
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
 
-#include <stdio.h>
+int indeks_slowa(char *slowo, char *linia);
 
-int szukaj(char *buf, char *klucz);
-/* Zwraca ile było w linii */
+int gdzie_jest_cale_slowo(char *slowo, char *linia);
 
-#endif
+int ilosc_wystapien_slowa(char *slowo, char *linia);
+
+void szukaj_slowa(char *slowo, char *line, skorowidz *sk, int nr_linii);
