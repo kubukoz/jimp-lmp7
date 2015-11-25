@@ -12,4 +12,5 @@ skorowidz utworz_skorowidz(int size, char **words);
 
 void dodaj_wystapienie(skorowidz *sk, int i, int linia);
 
+void print_wystapienia(skorowidz *sk);
 #endif
