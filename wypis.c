@@ -6,10 +6,10 @@
 #include <string.h>
 #include "wypis.h"
 
-void wypisz_linie(char *linia, int *indeks, int ilosc_indeksow, char *slowo){
+void wypisz_linie(char *linia, int *indeksy, int ilosc_indeksow, char *slowo){
     int i;
     int dlugosc_slowa=strlen(slowo);
-    int poczatek_slowa=*indeks;
+    int poczatek_slowa=*indeksy;
     int akt=0;
 
     for(i=0; i<ilosc_indeksow;i++){
@@ -18,8 +18,8 @@ void wypisz_linie(char *linia, int *indeks, int ilosc_indeksow, char *slowo){
         printf("\x1b[32m%.*s\x1b[0m",dlugosc_slowa,linia+poczatek_slowa);
         akt=poczatek_slowa+dlugosc_slowa;
 
-        indeks++;
-        poczatek_slowa=*indeks;
+        indeksy++;
+        poczatek_slowa=*indeksy;
     }
 
     /* Tutaj wypis tego co zostalo po wypisaniu wszystkich slow */

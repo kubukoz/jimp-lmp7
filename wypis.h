@@ -6,6 +6,6 @@
 #define _WYPIS_H
 
 
-void wypisz_linie(char *linia, int *indeks, int ilosc_indeksow, char *slowo);
+void wypisz_linie(char *linia, int *indeksy, int ilosc_indeksow, char *slowo);
 
 #endif
