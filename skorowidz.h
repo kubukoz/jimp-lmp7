@@ -5,12 +5,13 @@
 
 typedef struct {
     char **slowa;
+    int ilosc_slow;
     wektor *wystapienia;
 } skorowidz;
 
-skorowidz utworz_skorowidz(int size, char **words);
+skorowidz utworz_skorowidz(int rozmiar, char **slowa);
 
-void dodaj_wystapienie(skorowidz *sk, int i, int linia);
+void dodaj_wystapienia(skorowidz *sk, int nr_slowa, char *linia, int *indeksy, int ilosc_indeksow);
 
-void print_wystapienia(skorowidz *sk);
+void wypisz_skorowidz(skorowidz sk);
 #endif

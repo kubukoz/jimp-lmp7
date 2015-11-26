@@ -1,6 +1,3 @@
-//
-// Created by Michał Romaszko on 26.11.2015.
-//
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -13,7 +10,7 @@
 void wypisz_linie(char *linia, int *indeksy, int ilosc_indeksow, char *slowo) {
     int i;
     int dlugosc_slowa = strlen(slowo);
-    int poczatek_slowa = *indeksy;
+    int poczatek_slowa = indeksy[0];
     int akt = 0;
 
     for (i = 0; i < ilosc_indeksow; i++) {
@@ -26,9 +23,7 @@ void wypisz_linie(char *linia, int *indeksy, int ilosc_indeksow, char *slowo) {
         poczatek_slowa = *indeksy;
     }
 
-    /* Tutaj wypis tego co zostalo po wypisaniu wszystkich slow */
-
+    /*Tutaj wypis tego co zostalo po wypisaniu wszystkich slow*/
     dlugosc_slowa = strlen(linia);
     printf("%.*s", dlugosc_slowa - akt, linia + akt);
-
 }
