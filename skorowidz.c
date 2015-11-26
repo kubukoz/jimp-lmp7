@@ -1,8 +1,8 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include "wektor.h"
 #include "skorowidz.h"
 #include "wypis.h"
-#include <stdio.h>
 
 skorowidz utworz_skorowidz(int rozmiar, char **slowa) {
     int i;

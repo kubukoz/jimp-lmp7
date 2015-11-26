@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include "wypis_alt.h"
+#include "wypis.h"
 
 
 void wypisz_linie(char *linia, int *indeksy, int ilosc_indeksow, char *slowo) {

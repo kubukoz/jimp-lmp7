@@ -1,5 +1,5 @@
 
-reader: main.c skorowidz.c wektor.c szukaj.c wypis.c
+reader: main.c skorowidz.c wektor.c szukaj.c wypis_alt.c
 	$(CC) main.c skorowidz.c wektor.c szukaj.c wypis.c -o reader
 
 
