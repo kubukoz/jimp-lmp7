@@ -3,3 +3,4 @@
 **/*.o
 CMakeLists.txt
 reader
+reader-alt

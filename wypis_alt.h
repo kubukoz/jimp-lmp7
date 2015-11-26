@@ -1,0 +1,1 @@
+void wypisz_linie_alt(char *linia, int *indeksy, int ilosc_indeksow, char *slowo);

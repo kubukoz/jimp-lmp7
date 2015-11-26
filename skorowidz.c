@@ -1,8 +1,16 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "wektor.h"
-#include "skorowidz.h"
 #include "wypis.h"
+#include "wypis_alt.h"
+
+#include "wektor.h"
+//#define ALT ALT
+#include "skorowidz.h"
+#ifdef ALT
+#define wypisz_linie wypisz_linie_alt
+#else
+#define wypisz_linie wypisz_linie
+#endif
 
 skorowidz utworz_skorowidz(int rozmiar, char **slowa) {
     int i;
