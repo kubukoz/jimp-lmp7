@@ -13,7 +13,7 @@ int indeks_slowa(char *slowo, char *linia) {
 
 /*można zamienić na np. c != ' '*/
 int czy_znak_jest_slowny(char c) {
-    return isalpha(c) || isnumber(c);
+    return isalpha(c) || isdigit(c);
 }
 
 /*szuka wystąpień słowa w linii, takich że po jego lewej i prawej stronie
