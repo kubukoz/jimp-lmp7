@@ -1,8 +1,8 @@
 reader: main.c skorowidz.c wektor.c szukaj.c wypis.c wypis_alt.c
-	$(CC) main.c skorowidz.c wektor.c szukaj.c wypis.c wypis_alt.c -o build/reader
+	$(CC) main.c skorowidz.c wektor.c szukaj.c wypis.c wypis_alt.c -o reader
 
 reader-alt: main.c skorowidz.c wektor.c szukaj.c wypis.c wypis_alt.c
-	$(CC) main.c skorowidz.c wektor.c szukaj.c wypis.c wypis_alt.c -o build/reader-alt -DALT=1
+	$(CC) main.c skorowidz.c wektor.c szukaj.c wypis.c wypis_alt.c -o reader-alt -DALT=1
 
 
 main.c: skorowidz.c wektor.c szukaj.c wypis.c wypis_alt.c
@@ -13,9 +13,9 @@ wypis.c: wypis.h
 wypis_alt.c: wypis_alt.h
 
 test: reader
-	build/reader Makefile wektor
+	reader Makefile wektor
 test-alt: reader-alt
-	build/reader-alt main.c printf int
+	reader-alt main.c printf int
 
 clean:
 	cd build && rm *
