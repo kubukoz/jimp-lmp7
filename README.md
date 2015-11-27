@@ -13,21 +13,18 @@ Nasz zajumisty projekt na laboratorium Języków i Metod Programowania.
 
 Dla pliku main.c (as of `Fri Nov 27 01:57:53 CET 2015`)
 
-    ./reader main.c fprintf int
-
     Słowo fprintf znaleziono w liniach:
-        fprintf(stderr, "%s: błąd: nie mogę czytać pliku %s\n", argv[0], argv[1]);
-        fprintf(stderr, "%s: błąd: proszę podać słowa do wyszukiwania\n", argv[0]);
-
+    18:             fprintf(stderr, "%s: błąd: nie mogę czytać pliku %s\n", argv[0], argv[1]);
+    23:             fprintf(stderr, "%s: błąd: proszę podać słowa do wyszukiwania\n", argv[0]);
+    
     Słowo int znaleziono w liniach:
-    int main(int argc, char **argv) {
-        int i;
-        int ilosc_linii;
-        int ilosc_slow;
-                int *wystapienia = znajdz_slowo(argv[i + 2], buf);
-                int ilosc_indeksow = wystapienia[0];
-                int *indeksy = wystapienia + 1;
-
+    9:      int main(int argc, char **argv) {
+    10:         int i;
+    11:         int ilosc_linii;
+    12:         int ilosc_slow;
+    34:                 int *wystapienia = znajdz_slowo(argv[i + 2], buf);
+    35:                 int ilosc_indeksow = wystapienia[0];
+    36:                 int *indeksy = wystapienia + 1;
 
 
 # Wersja alt
