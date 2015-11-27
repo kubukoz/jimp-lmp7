@@ -4,7 +4,7 @@
 #include "wypis.h"
 
 
-void wypisz_linie_alt(char *linia, int *indeksy, int ilosc_indeksow, char *slowo) {
+void wypisz_linie_alt(char *linia, int nr_linii, int *indeksy, int ilosc_indeksow, char *slowo) {
     int i, j;
     int dlugosc_slowa = strlen(slowo);
     int poczatek_slowa = *indeksy;

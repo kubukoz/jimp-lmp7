@@ -25,7 +25,7 @@ int main(int argc, char **argv) {
     }
 
     ilosc_slow = argc - 2;
-    skorowidz skorowidz = utworz_skorowidz(ilosc_slow, argv + 2);
+    skorowidz *skorowidz = utworz_skorowidz(ilosc_slow, argv + 2);
 
     for (ilosc_linii = 1; fgets(buf, BUFSIZE, in) != NULL; ilosc_linii++) {
 
@@ -36,7 +36,7 @@ int main(int argc, char **argv) {
             int *indeksy = wystapienia + 1;
 
             if (ilosc_indeksow > 0)
-                dodaj_wystapienia(&skorowidz, i, buf, indeksy, ilosc_indeksow);
+                dodaj_wystapienia(skorowidz, i, buf, indeksy, ilosc_indeksow, ilosc_linii);
         }
     }
 

@@ -3,6 +3,7 @@
 
 typedef struct {
     char *linia;
+    int nr;
     int *indeksy;
     int ilosc_indeksow;
 } linia_info;
@@ -13,7 +14,7 @@ typedef struct {
     int size;
 } wektor;
 
-void dodaj_linie(wektor *w, char *cala_linia, int *indeksy, int ilosc_indeksow);
+void dodaj_linie(wektor *w, char *cala_linia, int nr_linii, int *indeksy, int ilosc_indeksow);
 
 wektor utworz_wektor();
 
