@@ -2,3 +2,4 @@
 build/
 **/*.o
 CMakeLists.txt
+reader*

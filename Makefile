@@ -13,9 +13,10 @@ wypis.c: wypis.h
 wypis_alt.c: wypis_alt.h
 
 test: reader
-	reader Makefile wektor
+	./reader Makefile wektor
+	./reader main.c fprintf int
 test-alt: reader-alt
-	reader-alt main.c printf int
+	./reader-alt main.c printf int
 
 clean:
 	cd build && rm *

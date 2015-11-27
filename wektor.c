@@ -16,7 +16,7 @@ wektor utworz_wektor() {
 }
 
 /*dodaje linię z indeksami wystąpień słowa do wektora*/
-void dodaj_linie(wektor *w, char *cala_linia, int *indeksy, int ilosc_indeksow) {
+void dodaj_linie(wektor *w, char *cala_linia, int nr_linii, int *indeksy, int ilosc_indeksow) {
 
     /*sprawdzamy, czy trzeba powiększyć rozmiar wektora*/
     if (w->size + 1 > w->max) {
@@ -25,8 +25,9 @@ void dodaj_linie(wektor *w, char *cala_linia, int *indeksy, int ilosc_indeksow) 
         w->linie = linie_temp;
     }
 
-    linia_info linia = {};
+    linia_info linia;
     linia.linia = malloc(strlen(cala_linia) * sizeof(char));
+    linia.nr = nr_linii;
     linia.indeksy = indeksy;
     linia.ilosc_indeksow = ilosc_indeksow;
 
