@@ -1,9 +1,10 @@
-#include <stdio.h>  // wiadomo po co
+#include <stdio.h>
 #include <stdlib.h>
 #include "skorowidz.h"
 #include "szukaj.h"
 
-#define BUFSIZE 8192   // zakładamy, że linie będą krótsze niż 8kB
+/*zakładamy, że linie będą krótsze niż 8kB*/
+#define BUFSIZE 8192
 
 int main(int argc, char **argv) {
     int i;
@@ -23,10 +24,12 @@ int main(int argc, char **argv) {
         return EXIT_FAILURE;
     }
 
-    skorowidz skorowidz = utworz_skorowidz(argc - 2, argv + 2);
     ilosc_slow = argc - 2;
+    skorowidz skorowidz = utworz_skorowidz(ilosc_slow, argv + 2);
 
     for (ilosc_linii = 1; fgets(buf, BUFSIZE, in) != NULL; ilosc_linii++) {
+
+        /*dla każdego słowa sprawdzamy, ile razy i gdzie pojawiło się w linii*/
         for (i = 0; i < ilosc_slow; i++) {
             int *wystapienia = znajdz_slowo(argv[i + 2], buf);
             int ilosc_indeksow = wystapienia[0];

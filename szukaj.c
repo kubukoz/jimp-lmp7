@@ -11,42 +11,47 @@ int indeks_slowa(char *slowo, char *linia) {
     else return addr - linia;
 }
 
-//można zamienić na np. c == ' '
-int znak_wyklucza_slowo(char c) {
+/*można zamienić na np. c != ' '*/
+int czy_znak_jest_slowny(char c) {
     return isalpha(c) || isnumber(c);
 }
 
+/*szuka wystąpień słowa w linii, takich że po jego lewej i prawej stronie
+ * nie ma znakow słownych - spełniających warunek czy_znak_jest_slowny*/
 int gdzie_jest_cale_slowo(char *slowo, char *linia) {
     int idx = indeks_slowa(slowo, linia);
     if (idx < 0)
         return NOTFOUND;
-    else if (idx > 0 && znak_wyklucza_slowo(linia[idx - 1]))
+    else if (idx > 0 && czy_znak_jest_slowny(linia[idx - 1]))
         return NOTFOUND;
 
     if (idx == strlen(linia) - 1)
         return idx;
-    else if (!znak_wyklucza_slowo(linia[idx + strlen(slowo)]))
+    else if (!czy_znak_jest_slowny(linia[idx + strlen(slowo)]))
         return idx;
     else return NOTFOUND;
 }
 
 /*
- * Pierwszy element to ilosć wystąpień
+ * Zwraca indeksy początków słowa, jeśli występuje ono w linii.
+ * Pierwszy element to ilosć wystąpień, kolejne to indeksy wystąpień.
+
+ * np. jeśli słowo nie znajduje się w linii, wynik będzie miał postać [0].
  * */
 int *znajdz_slowo(char *slowo, char *linia) {
     int idx = 0;
     int ilosc_wystapien = 1;
     int dlugosc_linii = strlen(linia);
 
-    /*NIE USUWAC MALLOCA BO SIE ROZWALI :)*/
-    int *indeksy = malloc(0);
+    /*odkomentować jakby się sypało*/
+    int *indeksy/* = malloc(0)*/;
 
-    //więcej niż znaków w linii to tych wystąpień nie będzie
+    /*więcej niż znaków w linii to tych wystąpień nie będzie*/
     int *wystapienia = malloc(dlugosc_linii * sizeof(int));
 
     wystapienia[0] = 0;
 
-    while (idx < dlugosc_linii) {
+    while (idx < dlugosc_linii - 1) {
         int adres = gdzie_jest_cale_slowo(slowo, linia + idx);
         if (adres < 0)
             break;
@@ -59,6 +64,7 @@ int *znajdz_slowo(char *slowo, char *linia) {
 
     wystapienia[0] = ilosc_wystapien - 1;
 
+    /*szczędzimy trochę pamięci :)*/
     indeksy = realloc(wystapienia, ilosc_wystapien * sizeof(int));
 
     return indeksy;

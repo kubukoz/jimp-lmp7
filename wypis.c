@@ -7,6 +7,7 @@
 #define ZIELONY_KONIEC   "\x1b[0m"
 #define WYPISZ_ZIELONYM ZIELONY_POCZATEK"%.*s"ZIELONY_KONIEC
 
+/*wypisuje linię zaznaczając wystąpienia słowa innym kolorem*/
 void wypisz_linie(char *linia, int *indeksy, int ilosc_indeksow, char *slowo) {
     int i;
     int dlugosc_slowa = strlen(slowo);
@@ -23,7 +24,7 @@ void wypisz_linie(char *linia, int *indeksy, int ilosc_indeksow, char *slowo) {
         poczatek_slowa = *indeksy;
     }
 
-    /*Tutaj wypis tego co zostalo po wypisaniu wszystkich slow*/
+    /*Tutaj wypis tego co zostało po wypisaniu wszystkich wystąpień słowa*/
     dlugosc_slowa = strlen(linia);
     printf("%.*s", dlugosc_slowa - akt, linia + akt);
 }

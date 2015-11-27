@@ -1,7 +1,3 @@
-//
-// Created by Michał Romaszko on 26.11.2015.
-//
-
 #ifndef _WYPIS_H
 #define _WYPIS_H
 

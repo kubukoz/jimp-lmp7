@@ -6,6 +6,4 @@ int indeks_slowa(char *slowo, char *linia);
 
 int gdzie_jest_cale_slowo(char *slowo, char *linia);
 
-int ilosc_wystapien_slowa(char *slowo, char *linia);
-
 int *znajdz_slowo(char *slowo, char *linia);

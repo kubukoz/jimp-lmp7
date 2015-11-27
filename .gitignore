@@ -1,6 +1,4 @@
-**/*.out
 .idea/
+build/
 **/*.o
 CMakeLists.txt
-reader
-reader-alt

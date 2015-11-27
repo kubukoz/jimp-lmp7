@@ -15,6 +15,6 @@ typedef struct {
 
 void dodaj_linie(wektor *w, char *cala_linia, int *indeksy, int ilosc_indeksow);
 
-wektor *utworz_wektor();
+wektor utworz_wektor();
 
 #endif
