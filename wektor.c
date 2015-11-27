@@ -3,7 +3,6 @@
 #include <string.h>
 #include "wektor.h"
 
-#define MAXLINESIZE 8192
 #define MAXSIZE 2
 
 /*tworzy pusty wektor o rozmiarze ustalonym w MAXSIZE*/
