@@ -19,4 +19,4 @@ test-alt: reader-alt
 	./reader-alt main.c printf int
 
 clean:
-	cd build && rm *
+	rm reader*
