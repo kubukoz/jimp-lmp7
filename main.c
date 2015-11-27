@@ -11,6 +11,7 @@ int main(int argc, char **argv) {
     int ilosc_linii;
     int ilosc_slow;
     char buf[BUFSIZE];
+    skorowidz *skorowidz;
 
     FILE *in = argc > 1 ? fopen(argv[1], "r") : stdin;
 
@@ -25,7 +26,7 @@ int main(int argc, char **argv) {
     }
 
     ilosc_slow = argc - 2;
-    skorowidz *skorowidz = utworz_skorowidz(ilosc_slow, argv + 2);
+    skorowidz = utworz_skorowidz(ilosc_slow, argv + 2);
 
     for (ilosc_linii = 1; fgets(buf, BUFSIZE, in) != NULL; ilosc_linii++) {
 

@@ -17,15 +17,16 @@ wektor utworz_wektor() {
 
 /*dodaje linię z indeksami wystąpień słowa do wektora*/
 void dodaj_linie(wektor *w, char *cala_linia, int nr_linii, int *indeksy, int ilosc_indeksow) {
+    linia_info linia;
 
     /*sprawdzamy, czy trzeba powiększyć rozmiar wektora*/
     if (w->size + 1 > w->max) {
+        linia_info *linie_temp;
         w->max += MAXSIZE;
-        linia_info *linie_temp = realloc(w->linie, w->max * sizeof(linia_info));
+        linie_temp = realloc(w->linie, w->max * sizeof(linia_info));
         w->linie = linie_temp;
     }
 
-    linia_info linia;
     linia.linia = malloc(strlen(cala_linia) * sizeof(char));
     linia.nr = nr_linii;
     linia.indeksy = indeksy;

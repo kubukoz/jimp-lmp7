@@ -1,12 +1,10 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <string.h>
 #include "wypis.h"
 #include "wypis_alt.h"
 
 #include "wektor.h"
 #include "skorowidz.h"
-
 #ifdef ALT
 #define wypisz_linie wypisz_linie_alt
 #else
